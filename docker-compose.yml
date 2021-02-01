@@ -1,0 +1,15 @@
+version: '3.0'
+
+services:
+  ana:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    volumes:
+      - .:/home/ana
+    entrypoint: ["python3", "ana.py"]
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+    entrypoint: ["python3", "-m", "unittest", "--verbose"]

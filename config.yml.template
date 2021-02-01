@@ -1,0 +1,41 @@
+# ANA CONFIGURATION FILE
+
+# Default Values: Character values to be searched for and replaced
+
+# Default Permutations To Be Replaced: the character to be replaced corresponds to the same index in 
+# 'Default Values' - ex. to change 'E', index #5 (0-based), replace '3' index #5 of 'Default Permutations' 
+# to the subsitution value desired
+
+# Number of Permutations Per Word To Be Replaced: ex. 'academics', if value of permutations per word is 
+# set to 3, only the first three substitution letters ('a', 'a', 'e') will be replaced in the combinations
+# generated
+
+# Default Number of Permutations Total Per Word: ex. 'academics' will use the number of permutations per
+# word value to be begin generating permutations until the value specified by 'number of permutations 
+# total per word' is reached.  If there are less combinations for the words in the wordlist based on the 
+# other settings, then this limit will not be reached and can be ignored.
+
+# Default Value of Progress Bar:  If set to True, the progress bar will be displayed during processing. Any
+# other value will be considered false and the progress bar will not be displayed.
+
+# Default Export Name: name of the new file to be written
+
+
+# Subsitution Reference (Default Settings):
+# ('a', 'A', 'b', 'B', 'e', 'E', 'g', 'G', 'i', 'I', 'l', 'L', 'o', 'O', 's', 'S')
+# ('4', '4', '8', '8', '3', '3', '6', '6', '1', '1', '1', '1', '0', '0', '5', '5')
+
+
+settings:
+    # Alpha characters to be replaced.
+    alpha_values:     ['a', 'A', 'b', 'B', 'e', 'E', 'g', 'G', 'i', 'I', 'l', 'L', 'o', 'O', 's', 'S']
+    # Numerical characters to be substituted in place of the alpha characters.
+    numerical_values: ['4', '4', '8', '8', '3', '3', '6', '6', '1', '1', '1', '1', '0', '0', '5', '5']
+    # Default number of permutations per word (ppw).
+    ppw: 20
+    # How many permutations total (pt) per word should be allowed.
+    pt: 20
+    # Adds the original word to the new word list if True.
+    include_original: True
+    # String to be appended to the filename. Leave blank for none.
+    append_name: AUG
